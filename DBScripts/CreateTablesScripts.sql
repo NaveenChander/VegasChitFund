@@ -1,6 +1,5 @@
 USE [CommunityFinancials]
 GO
-/****** Object:  Table [dbo].[PaymentTypeLkp]    Script Date: 11/16/2017 5:17:52 PM ******/
 SET ANSI_NULLS ON
 GO
 SET QUOTED_IDENTIFIER ON
@@ -19,7 +18,6 @@ CREATE TABLE [dbo].[PaymentTypeLkp](
 GO
 SET ANSI_PADDING OFF
 GO
-/****** Object:  Table [dbo].[Pool]    Script Date: 11/16/2017 5:17:52 PM ******/
 SET ANSI_NULLS ON
 GO
 SET QUOTED_IDENTIFIER ON
@@ -45,7 +43,6 @@ CREATE TABLE [dbo].[Pool](
 GO
 SET ANSI_PADDING OFF
 GO
-/****** Object:  Table [dbo].[PoolCollection]    Script Date: 11/16/2017 5:17:52 PM ******/
 SET ANSI_NULLS ON
 GO
 SET QUOTED_IDENTIFIER ON
@@ -65,7 +62,6 @@ CREATE TABLE [dbo].[PoolCollection](
 ) ON [PRIMARY]
 
 GO
-/****** Object:  Table [dbo].[PoolUser]    Script Date: 11/16/2017 5:17:52 PM ******/
 SET ANSI_NULLS ON
 GO
 SET QUOTED_IDENTIFIER ON
@@ -76,7 +72,6 @@ CREATE TABLE [dbo].[PoolUser](
 ) ON [PRIMARY]
 
 GO
-/****** Object:  Table [dbo].[TermTypeLkp]    Script Date: 11/16/2017 5:17:52 PM ******/
 SET ANSI_NULLS ON
 GO
 SET QUOTED_IDENTIFIER ON
@@ -91,7 +86,6 @@ CREATE TABLE [dbo].[TermTypeLkp](
 GO
 SET ANSI_PADDING OFF
 GO
-/****** Object:  Table [dbo].[User]    Script Date: 11/16/2017 5:17:52 PM ******/
 SET ANSI_NULLS ON
 GO
 SET QUOTED_IDENTIFIER ON
@@ -118,4 +112,44 @@ GO
 ALTER TABLE [dbo].[User] ADD  DEFAULT ('abc@123') FOR [Password]
 GO
 ALTER TABLE [dbo].[User] ADD  DEFAULT ((0)) FOR [IsAdmin]
+GO
+SET ANSI_NULLS ON
+GO
+SET QUOTED_IDENTIFIER ON
+GO
+SET ANSI_PADDING ON
+GO
+CREATE TABLE [dbo].[UserComments](
+	[UserID] [int] NOT NULL,
+	[PoolID] [int] NOT NULL,
+	[Comment] [varchar](1000) NOT NULL,
+	[CommentDate] [datetime] NOT NULL
+) ON [PRIMARY]
+
+GO
+
+SET ANSI_PADDING OFF
+GO
+USE [CommunityFinancials]
+GO
+SET ANSI_NULLS ON
+GO
+
+SET QUOTED_IDENTIFIER ON
+GO
+
+SET ANSI_PADDING ON
+GO
+
+CREATE TABLE [dbo].[UserMessages](
+	[UserID] [int] NOT NULL,
+	[UserMessage] [varchar](2000) NOT NULL,
+	[MessageTime] [datetime] NOT NULL,
+	[MessageRead] [bit] NOT NULL
+) ON [PRIMARY]
+
+GO
+SET ANSI_PADDING OFF
+GO
+ALTER TABLE [dbo].[UserMessages] ADD  CONSTRAINT [DF_UserMessages_MessageRead]  DEFAULT ((0)) FOR [MessageRead]
 GO

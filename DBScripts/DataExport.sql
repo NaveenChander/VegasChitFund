@@ -91,7 +91,48 @@ INSERT INTO [dbo].[PoolUser] ([PoolID] ,[UserID]) VALUES (1 ,10)
 
 GO
 
+USE [CommunityFinancials]
+GO
 
+INSERT INTO [dbo].[UserComments] ([UserID] ,[PoolID] ,[Comment] ,[CommentDate])
+     VALUES (1 ,0 ,'Hello All, Welcome to community financial initiative' ,'2017-11-16 17:49:00.000')
+INSERT INTO [dbo].[UserComments] ([UserID] ,[PoolID] ,[Comment] ,[CommentDate])
+     VALUES (3 ,0 ,'Good Work, Appreciate the initiative' ,'2017-11-16 17:50:00.000')
+INSERT INTO [dbo].[UserComments] ([UserID] ,[PoolID] ,[Comment] ,[CommentDate])
+     VALUES (5 ,0 ,'Nice !!' ,'2017-11-16 17:55:00.000')
+INSERT INTO [dbo].[UserComments] ([UserID] ,[PoolID] ,[Comment] ,[CommentDate])
+     VALUES (10 ,0 ,'All the best' ,'2017-11-16 17:56:00.000')
 
+GO
 
+USE [CommunityFinancials]
+GO
+
+INSERT INTO [dbo].[UserMessages] ([UserID] ,[UserMessage] ,[MessageTime] ,[MessageRead])
+     VALUES (2 ,'Welcome to Vegas Community fund initiative !!' , '11/16/2017' ,0)
+
+INSERT INTO [dbo].[UserMessages] ([UserID] ,[UserMessage] ,[MessageTime] ,[MessageRead])
+     VALUES (3 ,'Welcome to Vegas Community fund initiative !!' , '11/16/2017' ,0)
+
+INSERT INTO [dbo].[UserMessages] ([UserID] ,[UserMessage] ,[MessageTime] ,[MessageRead])
+     VALUES (4 ,'Welcome to Vegas Community fund initiative !!' , '11/16/2017' ,0)
+	 
+INSERT INTO [dbo].[UserMessages] ([UserID] ,[UserMessage] ,[MessageTime] ,[MessageRead])
+     VALUES (5 ,'Welcome to Vegas Community fund initiative !!' , '11/16/2017' ,0)
+	 
+INSERT INTO [dbo].[UserMessages] ([UserID] ,[UserMessage] ,[MessageTime] ,[MessageRead])
+     VALUES (6 ,'Welcome to Vegas Community fund initiative !!' , '11/16/2017' ,0)
+
+INSERT INTO [dbo].[UserMessages] ([UserID] ,[UserMessage] ,[MessageTime] ,[MessageRead])
+     VALUES (7 ,'Welcome to Vegas Community fund initiative !!' , '11/16/2017' ,0)
+	 
+INSERT INTO [dbo].[UserMessages] ([UserID] ,[UserMessage] ,[MessageTime] ,[MessageRead])
+     VALUES (8 ,'Welcome to Vegas Community fund initiative !!' , '11/16/2017' ,0)
+
+INSERT INTO [dbo].[UserMessages] ([UserID] ,[UserMessage] ,[MessageTime] ,[MessageRead])
+     VALUES (9 ,'Welcome to Vegas Community fund initiative !!' , '11/16/2017' ,0)
+
+INSERT INTO [dbo].[UserMessages] ([UserID] ,[UserMessage] ,[MessageTime] ,[MessageRead])
+     VALUES (10 ,'Welcome to Vegas Community fund initiative !!' , '11/16/2017' ,0)
+GO
 
